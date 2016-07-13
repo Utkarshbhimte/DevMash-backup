@@ -275,13 +275,28 @@ footer h6 {
     .course-logo {
         max-height: 120px;
     }
-    .button {
-			color: white !important;
-        font-size: 1.2em !important;
-        line-height: 1.4em !important;
-        height: 60px !important;
-        font-size: 1.4em !important;
-        line-height: 1.4em !important;
+.course-track .button {
+        margin-top: 2.5vh;
+        height: 40px !important;
+        width: 80vw;
+        line-height: 28px;
+        font-size: 24px;
+        color: white !important;
+        font-family: 'Roboto Mono', monospace !important;
+        transition: all .3s;
+        float: right;
+    }
+
+    form .button {
+      margin-top: 2.5vh;
+      height: 40px !important;
+      width: 80vw;
+      line-height: 28px;
+      font-size: 24px;
+      color: white !important;
+      font-family: 'Roboto Mono', monospace !important;
+      transition: all .3s;
+      float: right;
     }
 
 		form  .button{
