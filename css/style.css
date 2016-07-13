@@ -268,7 +268,8 @@ footer {
     font-family: 'Roboto Mono', monospace !important;
     background: #FFF !important;
     padding-right: 1em;
-    width: 80vw !important;
+    width: 100vw !important;
+		margin-left: -15vw;
     position: absolute;
     bottom: 0;
     padding-left: 1em;
