@@ -169,7 +169,7 @@ section {
 
 #team h5{
 		margin-top: 2px;
-		margin-bottom: 2px;
+		margin-bottom: 10px;
 }
 #team img {
     width: 15vw;
@@ -190,19 +190,33 @@ section {
     font-family: 'Roboto Mono', monospace !important;
     color: #FFF;
 }
-.button {
+.course-track .button {
     margin-top: 2.5vh;
+    height: 60px !important;
+    width: 300px;
+    line-height: 48px;
+    font-size: 32px;
     color: white !important;
     font-family: 'Roboto Mono', monospace !important;
-    background-color: #FFF;
-    margin-left: 2vw;
+    transition: all .3s;
+    float: right;
+}
+
+form .button {
+    margin-top: 2.5vh;
+    height: 60px !important;
+    width: 300px;
+    line-height: 48px;
+    font-size: 32px;
+    color: white !important;
+    font-family: 'Roboto Mono', monospace !important;
     transition: all .3s;
     float: right;
 }
 .select-wrapper {
     color: #f2f2f2;
 }
-form {
+#form,#form2 {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -262,14 +276,17 @@ footer h6 {
         max-height: 120px;
     }
     .button {
-        width: 83vw;
-        font-size: 1.4em !important;
+			color: white !important;
+        font-size: 1.2em !important;
         line-height: 1.4em !important;
         height: 60px !important;
         font-size: 1.4em !important;
         line-height: 1.4em !important;
-        height: 60px !important;
     }
+
+		form  .button{
+			width: 83vw;
+		}
 		#form2{
 			padding-top: 5vh;
 		}
