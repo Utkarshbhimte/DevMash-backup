@@ -189,6 +189,7 @@ section {
 	min-height: 45px !important;
 }
 #team .fa {
+    font-size: 1.8em;
     color: white;
     text-align: center
 }
@@ -271,6 +272,7 @@ footer {
     position: absolute;
     bottom: 0;
     padding-left: 1em;
+		animation-delay: .5s;
 }
 footer h6 {
     position: relative;
@@ -330,6 +332,9 @@ footer h6 {
     }
 		#team .outer{
 			flex-direction: column;
+		}
+		#team .fa{
+			font-size: 1em;
 		}
 		.inner{
 			flex-direction: column;

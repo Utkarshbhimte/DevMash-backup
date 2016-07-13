@@ -76,14 +76,16 @@ $(document).ready(function() {
             $('.mentorsImage').removeClass("invisible").addClass("animated bounceIn")
             $('.mentorsName').removeClass("invisible").addClass("animated flipInX")
             $('.mTitle').removeClass("invisible").addClass("animated flipInX")
+            $('#team .fa').removeClass("invisible").addClass("animated flipInX")
         }
 
         if (wScroll > $('#form').offset().top - 50) {
-            $('#form').removeClass("invisible").addClass("animated slideInUp")
+            $('#form').removeClass("invisible").addClass("animated slideInDown")
         }
 
         if (wScroll > $('#form2').offset().top - 50) {
-            $('#form2').removeClass("invisible").addClass("animated slideInUp")
+          $('form').removeClass("invisible").addClass("animated slideInDown")
+          $('footer').removeClass("invisible").addClass("animated slideInUp")
         }
 
     });
