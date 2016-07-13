@@ -151,6 +151,7 @@ section {
     width: 20vw;
 }
 .course-track p {
+    font-family: 'Roboto Mono', monospace !important;
     color: white;
     font-size: 1.8vw !important;
 }
@@ -158,7 +159,6 @@ section {
     width: 100%;
     height: auto;
     max-height: 260px;
-    max-width: 200px;
     height: 100%;
     margin-left: auto;
     margin-right: auto;
@@ -192,15 +192,19 @@ section {
 .button {
     margin-top: 2.5vh;
     color: white !important;
+    font-family: 'Roboto Mono', monospace !important;
     background-color: #FFF;
     margin-left: 2vw;
     transition: all .3s;
+    float: right;
 }
 .select-wrapper {
     color: #f2f2f2;
 }
-#form button {
-    color: #FFF;
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 div#gender {
     padding-left: 1em;
@@ -214,16 +218,22 @@ input, label, h4 {
 h4 {
     border: solid #FFF 1px;
     padding: 1em 2em;
-    margin: 5vh 0px !important;
-    margin-bottom: 15vh !important;
+    margin:10vh 0px !important;
+    margin-bottom: 10vh !important;
 }
 footer {
     font-family: 'Roboto Mono', monospace !important;
     background: #FFF !important;
     padding-right: 1em;
+    width: 80vw !important;
+    position: absolute;
+    bottom: 0;
+		padding-left: 1em;
 }
-footer h5 {
-    float: right;
+footer h6 {
+	position: relative;
+	bottom: 0;
+	left: 0;
 }
 .valign-wrapper {
     display: -webkit-flex;
@@ -240,11 +250,26 @@ footer h5 {
     #nav-btns a {
         font-size: 5vw;
     }
-		#nav-btns {
-		    margin-right: .5em;
-		}
+    #nav-btns {
+        margin-right: .5em;
+    }
     .course-track p {
         color: white;
         font-size: 4vw !important;
     }
+    .course-logo {
+        max-height: 200px;
+    }
+    .button {
+        width: 83vw;
+        font-size: 1.4em !important;
+        line-height: 1.4em !important;
+        height: 60px !important;
+        font-size: 1.4em !important;
+        line-height: 1.4em !important;
+        height: 60px !important;
+    }
+		#form2{
+			padding-top: 15vh;
+		}
 }
