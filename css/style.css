@@ -271,7 +271,8 @@ footer {
     width: 100vw !important;
 		margin-left: -15vw;
     position: absolute;
-    bottom: 0;
+    bottom: 0px;
+		left: 0px;
     padding-left: 1em;
 		animation-delay: .5s;
 }
@@ -290,6 +291,9 @@ footer h6 {
 }
 .valign-wrapper .valign {
     display: block;
+}
+.mobile-only{
+	display: none;
 }
 @media only screen and (max-width: 1026px) {
     #nav-btns a {
@@ -351,5 +355,14 @@ footer h6 {
 		}
 		.inner .fa-twitter:nth-child(1){
 			margin-bottom: 12px;
+		}
+		.mobile-only{
+			display: inline;
+		}
+		footer{
+			margin-left: 0vw;
+			position: relative;
+			bottom: -5vh;
+			left: 0px;
 		}
 }

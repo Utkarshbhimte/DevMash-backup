@@ -85,7 +85,7 @@ $(document).ready(function() {
 
         if (wScroll > $('#form2').offset().top - 50) {
           $('form').removeClass("invisible").addClass("animated slideInDown")
-          $('footer').removeClass("invisible").addClass("animated slideInUp")
+          $('footer').removeClass("invisible").addClass("animated slideInRight")
         }
 
     });
