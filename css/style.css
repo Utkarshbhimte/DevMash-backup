@@ -166,9 +166,10 @@ section {
 #team .row {
     margin-top: 7vh;
 }
-#team .columns {
-    margin-top: 1vh;
-    margin-bottom: 1vh;
+
+#team h5{
+		margin-top: 2px;
+		margin-bottom: 2px;
 }
 #team img {
     width: 15vw;
@@ -213,7 +214,7 @@ div#gender {
 input, label, h4 {
     color: #f2f2f2 !important;
     font-family: 'Roboto Mono', monospace !important;
-    font-size: 1.2em !important;
+    font-size: .7em !important;
 }
 h4 {
     border: solid #FFF 1px;
@@ -258,7 +259,7 @@ footer h6 {
         font-size: 4vw !important;
     }
     .course-logo {
-        max-height: 200px;
+        max-height: 120px;
     }
     .button {
         width: 83vw;
@@ -270,6 +271,6 @@ footer h6 {
         height: 60px !important;
     }
 		#form2{
-			padding-top: 15vh;
+			padding-top: 5vh;
 		}
 }
