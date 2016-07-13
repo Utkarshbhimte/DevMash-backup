@@ -343,4 +343,7 @@ footer h6 {
 		.titleContainer{
 			min-height: 0 !important;
 		}
+		.inner .fa-twitter:nth-child(1){
+			margin-bottom: 12px;
+		}
 }
