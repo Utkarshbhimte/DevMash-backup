@@ -153,7 +153,7 @@ section {
     margin-right: auto;
 }
 .course-track p {
-	font-family: 'Roboto Mono', monospace !important;
+    font-family: 'Roboto Mono', monospace !important;
     color: white;
     font-size: 1.8vw !important;
 }
@@ -172,15 +172,15 @@ section {
     flex-direction: row;
     justify-content: center;
 }
-#team .inner .columns, .mentorsName{
+#team .inner .columns, .mentorsName {
     margin-top: 8px;
-		font-family: 'Roboto Mono', monospace !important;
-		text-align: center;
+    font-family: 'Roboto Mono', monospace !important;
+    text-align: center;
 }
 .mTitle {
     font-family: 'Roboto Condensed', sans-serif;
     font-weight: 100;
-		text-align: center;
+    text-align: center;
 }
 .inner {
     display: flex;
@@ -188,8 +188,8 @@ section {
     justify-content: space-around;
     color: #FFF;
 }
-.titleContainer{
-	min-height: 45px !important;
+.titleContainer {
+    min-height: 45px !important;
 }
 #team .fa {
     font-size: 1.8em;
@@ -272,12 +272,12 @@ footer {
     background: #FFF !important;
     padding-right: 1em;
     width: 100vw !important;
-		margin-left: -15vw;
+    margin-left: -15vw;
     position: absolute;
     bottom: 0px;
-		left: 0px;
+    left: 0px;
     padding-left: 1em;
-		animation-delay: .5s;
+    animation-delay: .5s;
 }
 footer h6 {
     position: relative;
@@ -295,8 +295,8 @@ footer h6 {
 .valign-wrapper .valign {
     display: block;
 }
-.mobile-only{
-	display: none;
+.mobile-only {
+    display: none;
 }
 @media only screen and (max-width: 1026px) {
     #nav-btns a {
@@ -328,7 +328,7 @@ footer h6 {
         margin-top: 2.5vh;
         height: 40px !important;
         width: 80vw;
-				max-width: 100%;
+        max-width: 100%;
         line-height: 28px;
         font-size: 24px;
         color: white !important;
@@ -338,36 +338,36 @@ footer h6 {
     #form2 {
         padding-top: 5vh;
     }
-		#team .outer{
-			flex-direction: column;
-		}
-		#team .fa{
-			font-size: 1em;
-		}
-		.inner{
-			flex-direction: column;
-			justify-content: flex-start;
-		}
-		.mContent{
-			display: flex;
-			justify-content: space-around;
-			margin-top: 2vh;
-		}
-		.titleContainer{
-			min-height: 0 !important;
-		}
-		.inner .fa-twitter:nth-child(1){
-			margin-bottom: 12px;
-		}
-		.mobile-only{
-			display: inline;
-		}
-		footer{
-			margin-left: 0vw;
-			position: relative;
-			bottom: -5vh;
-			left: 0px;
-		}
+    #team .outer {
+        flex-direction: column;
+    }
+    #team .fa {
+        font-size: 1em;
+    }
+    .inner {
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+    .mContent {
+        display: flex;
+        justify-content: space-around;
+        margin-top: 2vh;
+    }
+    .titleContainer {
+        min-height: 0 !important;
+    }
+    .inner .fa-twitter:nth-child(1) {
+        margin-bottom: 12px;
+    }
+    .mobile-only {
+        display: inline;
+    }
+    footer {
+        margin-left: 0vw;
+        position: relative;
+        bottom: -5vh;
+        left: 0px;
+    }
     #second img {
         height: auto;
         width: 90vw;
