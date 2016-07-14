@@ -1,6 +1,6 @@
 //Code stolen from css-tricks for smooth scrolling:
 $(document).ready(function() {
-
+  
     $('.scrollspy').scrollSpy();
 
     $.scrollify({
