@@ -278,6 +278,7 @@ footer {
     left: 0px;
     padding-left: 1em;
     animation-delay: .5s;
+    z-index: 0;
 }
 footer h6 {
     position: relative;
