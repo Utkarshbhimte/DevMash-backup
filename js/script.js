@@ -1,6 +1,12 @@
 //Code stolen from css-tricks for smooth scrolling:
+function submitMessage(message){
+  console.log("reached!");
+  var $toastContent = $('<span>'+message+'</span>');
+Materialize.toast($toastContent, 5000);
+}
+
 $(document).ready(function() {
-  
+
     $('.scrollspy').scrollSpy();
 
     $.scrollify({
@@ -89,5 +95,6 @@ $(document).ready(function() {
         }
 
     });
+
 
 });
