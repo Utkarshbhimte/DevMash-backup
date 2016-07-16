@@ -357,7 +357,8 @@ footer h6 {
         transition: all .3s;
     }
     #form2 {
-        padding-top: 5vh;
+        padding-top: 7vh;
+        padding-bottom: 5vh;
     }
     #team .outer {
         flex-direction: column;
