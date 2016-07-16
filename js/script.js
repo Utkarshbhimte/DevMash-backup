@@ -1,8 +1,16 @@
 //Code stolen from css-tricks for smooth scrolling:
-function submitMessage(message){
-  console.log("reached!");
+function submitMessage(status, message){
+
   var $toastContent = $('<span>'+message+'</span>');
-Materialize.toast($toastContent, 5000);
+  if (status = 'pass') {
+    console.log("1");
+    $(".nav").css("background-color", "green");
+    Materialize.toast($toastContent, 100000);
+  } else if (status = 'fail') {
+    console.log("2");
+    $(".nav").css("background-color", "red");
+      }
+
 }
 
 $(document).ready(function() {

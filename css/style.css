@@ -17,13 +17,29 @@ html {
     background: transparent;
     /* optional: just make scrollbar invisible */
 }
+
+
 ::-webkit-scrollbar-thumb {
     background: #FFF;
 }
 .invisible {
     opacity: 0;
 }
-
+.red-toast{
+  background-color:#b71c1c !important;
+}
+.green-toast{
+    background-color:#64dd17 !important;
+}
+@-webkit-keyframes green {
+    0%   {background-color: #1e1d1d;}
+    50%  {background-color:#64dd17;}
+    100% {background-color: #1e1d1d;}
+} @-webkit-keyframes red {
+    0%   {background-color: #1e1d1d;}
+    50%  {background-color:#b71c1c;}
+    100% {background-color: #1e1d1d;}
+}
 /* Navigation */
 
 .nav {
@@ -37,6 +53,7 @@ html {
     position: fixed;
     top: 0;
     z-index: 5;
+    transition: background-color .3s ease-in;
 }
 #nav-btns {
     margin-right: 2em;
