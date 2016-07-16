@@ -303,6 +303,10 @@ footer h6 {
     #nav-btns a {
         font-size: 5vw;
     }
+    .button{
+      padding-left: 20px !important;
+      padding-right: 20px!important;
+    }
     #nav-btns {
         margin-right: .5em;
     }
