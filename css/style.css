@@ -393,4 +393,11 @@ footer h6 {
         height: auto;
         width: 90vw;
     }
+    form div.row{
+      margin-bottom: 0px !important;
+    }
+    form input{
+      margin-bottom: 0px !important;
+      height: 7vh !important;
+    }
 }
