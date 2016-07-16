@@ -303,10 +303,7 @@ footer h6 {
     #nav-btns a {
         font-size: 5vw;
     }
-    .button{
-      padding-left: 20px !important;
-      padding-right: 20px!important;
-    }
+
     #nav-btns {
         margin-right: .5em;
     }
@@ -319,11 +316,13 @@ footer h6 {
         height: 15vh;
     }
     .course-track .button {
+      padding-left: 20px !important;
+      padding-right: 20px!important;
         margin-top: 2.5vh;
         height: 40px !important;
         width: 32vw;
         line-height: 28px;
-        font-size: 24px;
+        font-size: 9px;
         color: white !important;
         font-family: 'Roboto Mono', monospace !important;
         transition: all .3s;
