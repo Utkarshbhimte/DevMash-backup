@@ -84,3 +84,10 @@ function submitMessage(message) {
     var $toastContent = $('<span>' + message + '</span>');
     Materialize.toast($toastContent, 2000);
 }
+/**
+$(window).resize(function() {
+    if (screen.width <= 767) {
+      $.scrollify.disable();
+    }
+});
+**/

@@ -369,6 +369,9 @@ footer {
     .form-container {
         margin-bottom: 15vh
     }
+    .form-container h2{
+      font-size: 10vw;
+    }
     form div.row, form input {
         margin-bottom: 0!important
     }
@@ -387,8 +390,5 @@ footer {
     }
     h4 {
         margin: 0!important
-    }
-    form.container {
-        padding-top: 25vh
     }
 }
