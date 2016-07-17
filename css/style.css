@@ -280,25 +280,27 @@ form .button {
     margin-top: 15vh;
     margin-bottom: 15vh;
     display: block;
-  position: relative;
+    position: relative;
 }
-form{
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
+form {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
 }
 div#gender {
     padding-left: 1em;
     margin-right: 1em;
 }
-input, label, h4 {
+input, label {
     color: #f2f2f2 !important;
     font-family: 'Roboto Mono', monospace !important;
     font-size: .7em !important;
 }
-h4 {
+.form-container h2 {
+    color: #f2f2f2 !important;
+    font-family: 'Roboto Mono', monospace !important;
     border: solid #FFF 1px;
-    padding: 1em 2em;
+    padding: .2em;
     margin: 10vh 0px !important;
     margin-bottom: 10vh !important;
 }
@@ -420,7 +422,7 @@ footer h6 {
     h4 {
         margin: 0px 0px !important;
     }
-    form.container{
-      padding-top: 25vh;
+    form.container {
+        padding-top: 25vh;
     }
 }
