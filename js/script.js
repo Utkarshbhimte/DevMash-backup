@@ -30,7 +30,7 @@ $(document).ready(function() {
         scrollSpeed: 1100,
         offset: 0,
         scrollbars: false,
-        standardScrollElements: "",
+        standardScrollElements: ".dropdown-content",
         setHeights: true,
         overflowScroll: true,
         before: function() {},
