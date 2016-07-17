@@ -1,19 +1,26 @@
 //Code stolen from css-tricks for smooth scrolling:
-function submitMessage(status, message){
+function submitMessage(status, message) {
 
-  var $toastContent = $('<span>'+message+'</span>');
-  if (status = 'pass') {
-    console.log("1");
-    $(".nav").css("background-color", "green");
-    Materialize.toast($toastContent, 100000);
-  } else if (status = 'fail') {
-    console.log("2");
-    $(".nav").css("background-color", "red");
-      }
+    var $toastContent = $('<span>' + message + '</span>');
+    if (status = 'pass') {
+        console.log("1");
+        $(".nav").css("background-color", "green");
+        Materialize.toast($toastContent, 100000);
+    } else if (status = 'fail') {
+        console.log("2");
+        $(".nav").css("background-color", "red");
+    }
 
 }
 
 $(document).ready(function() {
+  JoelPurra.PlusAsTab.setOptions({
+  // Use enter instead of plus
+  // Number 13 found through demo at
+  // http://api.jquery.com/event.which/
+  key: 13
+});
+
 
     $('.scrollspy').scrollSpy();
 
@@ -44,13 +51,6 @@ $(document).ready(function() {
         return false;
     });
 
-    $(' #five p ').flowtype({
-        minimum: 500,
-        maximum: 1200,
-        minFont: 12,
-        maxFont: 20,
-        fontRatio: 30
-    });
 
     $('select').material_select();
 
@@ -93,16 +93,49 @@ $(document).ready(function() {
             $('#team .fa').removeClass("invisible").addClass("animated flipInX")
         }
 
-        if (wScroll > $('#form').offset().top - 50) {
-            $('#form').removeClass("invisible").addClass("animated slideInDown")
+        if (wScroll > $('.form-container').offset().top - 50) {
+            $('.form-container').removeClass("invisible").addClass("animated slideInDown")
         }
 
-        if (wScroll > $('#form2').offset().top - 50) {
-          $('form').removeClass("invisible").addClass("animated slideInDown")
-          $('footer').removeClass("invisible").addClass("animated slideInRight")
+        if (wScroll > $('.form-container:nth-child(2)').offset().top - 50) {
+            $('.form-container:nth-child(2) form').removeClass("invisible").addClass("animated slideInDown")
+            $('footer').removeClass("invisible").addClass("animated slideInRight")
         }
 
     });
 
+    function convertEnterToTab() {
+        if (event.keyCode == 13) {
+            event.keyCode = 9;
+            console.log("pressed");
+        }
+    }
+    document.onkeydown = convertEnterToTab;
+
+$("form").enterkeytab();
+
+//tabasplus
+
 
 });
+
+
+$.fn.enterkeytab = function() {
+    $(this).on('keydown', 'input, select,', function(e) {
+        var self = $(this),
+            form = self.parents('form:eq(0)'),
+            focusable, next;
+        if (e.keyCode == 13) {
+            focusable = form.find('input,a,select,button').filter(':visible');
+            next = focusable.eq(focusable.index(this) + 1);
+            if (next.length) {
+                next.focus();
+            } else {
+                alert("wd");
+                //form.submit();
+            }
+            return false;
+        }
+    });
+
+}

@@ -29,12 +29,12 @@
     <!-- Scripts
          –––––––––––––––––––––––––––––––––––––––––––––––––– -->
     <script src="js/jquery-3.0.0.min.js"></script>
-    <script src="https://use.fontawesome.com/14779ae62f.js"></script>
     <script src="js/materialize.min.js"></script>
-    <script src="js/flowtype.js"></script>
     <script src="js/jquery.scrollify.min.js"></script>
     <script src="js/script.js"></script>
+    <script src="js/tab.js" type="text/javascript">
 
+    </script>
 </head>
 
 <body>
@@ -205,22 +205,22 @@
 
     <!-- Form
        –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-    <section id="form" class="invisible  section scrollspy" data-section-name="form">
-        <form class="columns twelve container">
+    <section class="invisible  section scrollspy form-container" data-section-name="form">
+        <form class="container" >
 
             <h4>Registration Form</h4>
-            <div class="row ">
+            <div class="row " data-plus-as-tab="true">
                 <div class="input-field columns six">
-                    <input placeholder="First Name" id="first_name" type="text" class="validate">
+                    <input placeholder="First Name" id="first_name" type="text" class="validate enterastab">
                 </div>
                 <div class="input-field columns six">
-                    <input placeholder="Last Name" id="last_name" type="text" class="validate">
+                    <input placeholder="Last Name" id="last_name" type="text" class="validate  enterastab">
                 </div>
             </div>
             <div class="row valign-wrapper">
-                <div id="gender" class="columns six row valign">
+                <div id="gender" class="columns six row valign" class=" enterastab">
                     <p class="columns six ">
-                        <input name="group1" type="radio" id="test1" />
+                        <input name="group1" type="radio" id="test1"  />
                         <label for="test1">Male</label>
                     </p>
                     <p class="columns six valign">
@@ -229,14 +229,13 @@
                     </p>
                 </div>
                 <div class="input-field columns six">
-                    <input placeholder="Contact No." id="icon_telephone" type="tel" class="validate">
+                    <input placeholder="Contact No." id="icon_telephone" type="tel" class="validate enterastab">
                 </div>
             </div>
-            <a href="#form2" class="button">Next</a>
         </form>
     </section>
-    <section id="form2" data-section-name="form">
-        <form class="columns twelve container invisible">
+    <section class="invisible  section scrollspy form-container" data-section-name="form">
+        <form class="container" data-plus-as-tab="true">
             <div class="row">
                 <div class="input-field columns six">
                     <select>
@@ -254,6 +253,7 @@
                     <input placeholder="USN" id="usn" type="text" class="validate">
                 </div>
             </div>
+
             <div class="row">
                 <div class="input-field columns six">
                     <select>
@@ -267,7 +267,10 @@
                     <input placeholder="Github" id="github" type="text" class="validate">
                 </div>
             </div>
-
+          </form>
+      </section>
+      <section class="invisible  section scrollspy form-container" data-section-name="form">
+          <form class="container" data-plus-as-tab="true">
             <div class="row">
                 <div class="input-field columns six">
                     <select>
@@ -284,9 +287,11 @@
             </div>
             <a class="button" onclick="submitMessage('pass','Registration Done!!')">Register</a>
         </form>
-        <footer class="invisible">
-            <h6>Developed By <strong style="font-weight : bold">Utkarsh Bhimte</strong>.<br class="mobile-only"> Design by <strong style="font-weight : bold">Prateek Prasad</strong>.</h6>
-        </footer>
+        <!--
+<footer class="invisible">
+    <h6>Developed By <strong style="font-weight : bold">Utkarsh Bhimte</strong>.<br class="mobile-only"> Design by <strong style="font-weight : bold">Prateek Prasad</strong>.</h6>
+</footer>
+-->
     </section>
 
 

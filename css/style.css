@@ -17,29 +17,41 @@ html {
     background: transparent;
     /* optional: just make scrollbar invisible */
 }
-
-
 ::-webkit-scrollbar-thumb {
     background: #FFF;
 }
 .invisible {
     opacity: 0;
 }
-.red-toast{
-  background-color:#b71c1c !important;
+.red-toast {
+    background-color: #b71c1c !important;
 }
-.green-toast{
-    background-color:#64dd17 !important;
+.green-toast {
+    background-color: #64dd17 !important;
 }
 @-webkit-keyframes green {
-    0%   {background-color: #1e1d1d;}
-    50%  {background-color:#64dd17;}
-    100% {background-color: #1e1d1d;}
-} @-webkit-keyframes red {
-    0%   {background-color: #1e1d1d;}
-    50%  {background-color:#b71c1c;}
-    100% {background-color: #1e1d1d;}
+    0% {
+        background-color: #1e1d1d;
+    }
+    50% {
+        background-color: #64dd17;
+    }
+    100% {
+        background-color: #1e1d1d;
+    }
 }
+@-webkit-keyframes red {
+    0% {
+        background-color: #1e1d1d;
+    }
+    50% {
+        background-color: #b71c1c;
+    }
+    100% {
+        background-color: #1e1d1d;
+    }
+}
+
 /* Navigation */
 
 .nav {
@@ -99,8 +111,8 @@ html {
     flex-direction: row;
 }
 section {
-    height: 103vh;
     position: relative;
+    min-height: 100vh;
 }
 .opt-content {
     position: absolute;
@@ -264,10 +276,16 @@ form .button {
 .select-wrapper {
     color: #f2f2f2;
 }
-#form, #form2 {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+.form-container {
+    margin-top: 15vh;
+    margin-bottom: 15vh;
+    display: block;
+  position: relative;
+}
+form{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
 }
 div#gender {
     padding-left: 1em;
@@ -320,7 +338,6 @@ footer h6 {
     #nav-btns a {
         font-size: 5vw;
     }
-
     #nav-btns {
         margin-right: .5em;
     }
@@ -333,8 +350,8 @@ footer h6 {
         height: 15vh;
     }
     .course-track .button {
-      padding-left: 20px !important;
-      padding-right: 20px!important;
+        padding-left: 20px !important;
+        padding-right: 20px!important;
         margin-top: 2.5vh;
         height: 40px !important;
         width: 32vw;
@@ -355,10 +372,6 @@ footer h6 {
         color: white !important;
         font-family: 'Roboto Mono', monospace !important;
         transition: all .3s;
-    }
-    #form2 {
-        padding-top: 7vh;
-        padding-bottom: 5vh;
     }
     #team .outer {
         flex-direction: column;
@@ -384,6 +397,10 @@ footer h6 {
     .mobile-only {
         display: inline;
     }
+    .form-container {
+        margin-top: 20vh;
+        margin-bottom: 15vh;
+    }
     footer {
         margin-left: 0vw;
         position: relative;
@@ -394,11 +411,14 @@ footer h6 {
         height: auto;
         width: 90vw;
     }
-    form div.row{
-      margin-bottom: 0px !important;
+    form div.row {
+        margin-bottom: 0px !important;
     }
-    form input{
-      margin-bottom: 0px !important;
-      height: 7vh !important;
+    form input {
+        margin-bottom: 0px !important;
+        height: 7vh !important;
+    }
+    h4 {
+        margin: 0px 0px !important;
     }
 }
