@@ -398,7 +398,6 @@ footer h6 {
         display: inline;
     }
     .form-container {
-        margin-top: 20vh;
         margin-bottom: 15vh;
     }
     footer {
@@ -420,5 +419,8 @@ footer h6 {
     }
     h4 {
         margin: 0px 0px !important;
+    }
+    form.container{
+      padding-top: 25vh;
     }
 }

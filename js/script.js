@@ -5,7 +5,7 @@ function submitMessage(status, message) {
     if (status = 'pass') {
         console.log("1");
         $(".nav").css("background-color", "green");
-        Materialize.toast($toastContent, 100000);
+        Materialize.toast($toastContent, 600);
     } else if (status = 'fail') {
         console.log("2");
         $(".nav").css("background-color", "red");
@@ -14,13 +14,6 @@ function submitMessage(status, message) {
 }
 
 $(document).ready(function() {
-  JoelPurra.PlusAsTab.setOptions({
-  // Use enter instead of plus
-  // Number 13 found through demo at
-  // http://api.jquery.com/event.which/
-  key: 13
-});
-
 
     $('.scrollspy').scrollSpy();
 
@@ -104,38 +97,24 @@ $(document).ready(function() {
 
     });
 
-    function convertEnterToTab() {
-        if (event.keyCode == 13) {
-            event.keyCode = 9;
-            console.log("pressed");
-        }
-    }
-    document.onkeydown = convertEnterToTab;
-
-$("form").enterkeytab();
-
-//tabasplus
-
-
-});
-
-
-$.fn.enterkeytab = function() {
-    $(this).on('keydown', 'input, select,', function(e) {
-        var self = $(this),
-            form = self.parents('form:eq(0)'),
-            focusable, next;
+    $('body').on('keydown', 'input, select, textarea', function(e) {
+        var self = $(this)
+          , form = self.parents('form:eq(0)')
+          , focusable
+          , next
+          ;
         if (e.keyCode == 13) {
-            focusable = form.find('input,a,select,button').filter(':visible');
-            next = focusable.eq(focusable.index(this) + 1);
+            focusable = form.find('input,a,select,button,textarea').filter(':visible');
+            next = focusable.eq(focusable.index(this)+1);
             if (next.length) {
                 next.focus();
             } else {
-                alert("wd");
-                //form.submit();
+                form.submit();
             }
             return false;
         }
     });
 
-}
+
+
+});
