@@ -1,18 +1,3 @@
-//Code stolen from css-tricks for smooth scrolling:
-function submitMessage(status, message) {
-
-    var $toastContent = $('<span>' + message + '</span>');
-    if (status = 'pass') {
-        console.log("1");
-        $(".nav").css("background-color", "green");
-        Materialize.toast($toastContent, 600);
-    } else if (status = 'fail') {
-        console.log("2");
-        $(".nav").css("background-color", "red");
-    }
-
-}
-
 $(document).ready(function() {
 
     $('.scrollspy').scrollSpy();
