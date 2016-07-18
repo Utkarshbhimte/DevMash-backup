@@ -108,7 +108,6 @@ html {
 }
 section {
     position: relative;
-    min-height: 100vh
 }
 .opt-content {
     position: absolute;
@@ -117,7 +116,7 @@ section {
     transform: translate(-50%, -50%)
 }
 footer, footer h6 {
-    left: 0;
+    right: 0;
     bottom: 0
 }
 #LandingPage p {
@@ -219,11 +218,6 @@ footer, footer h6 {
     display: block;
     margin-bottom: 32px
 }
-#team img:hover {
-    -webkit-filter: grayscale(0);
-    filter: grayscale(0);
-    transform: scale(1.1)
-}
 #team h5, #team h6 {
     color: #f2f2f2!important
 }
@@ -238,7 +232,10 @@ footer, footer h6 {
   width: 100%!important;
   position: absolute;
   bottom: 6vh;
-left: 0vw;
+  left: 0vw;
+}
+form.container{
+  padding-bottom: 10vh;
 }
 
 .course-track .button, form .button {
@@ -260,9 +257,8 @@ left: 0vw;
     font-family: 'Roboto Mono', monospace!important
 }
 .form-container {
-    margin-top: 15vh;
-    margin-bottom: 15vh;
-    display: block
+    margin-top: 25vh;
+    display: block;
 }
 footer, form {
     position: absolute
@@ -283,6 +279,7 @@ input, label {
     padding: .2em;
     margin: 10vh 0!important
 }
+
 footer {
     font-family: 'Roboto Mono', monospace!important;
     background: #FFF!important;
@@ -342,6 +339,9 @@ footer {
         max-width: 100%;
         font-size: 24px
     }
+    form.container{
+      padding-bottom: 0vh;
+    }
     #team .outer {
         flex-direction: column
     }
@@ -367,7 +367,7 @@ footer {
         display: inline
     }
     .form-container {
-        margin-bottom: 15vh
+        margin-bottom: 2vh
     }
     .form-container h2{
       font-size: 10vw;
@@ -390,5 +390,8 @@ footer {
     }
     h4 {
         margin: 0!important
+    }
+    .form-container h2{
+      font-size: 10vw;
     }
 }

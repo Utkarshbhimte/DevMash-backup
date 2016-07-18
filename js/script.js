@@ -47,20 +47,24 @@ $(document).ready(function() {
         }
 
         if (wScroll > $('#team').offset().top - 50) {
-            $('.mentorsImage').removeClass("invisible").addClass("animated bounceIn")
-            $('.mentorsName').removeClass("invisible").addClass("animated flipInX")
-            $('.mTitle').removeClass("invisible").addClass("animated flipInX")
-            $('#team .fa').removeClass("invisible").addClass("animated flipInX")
+            $('.mentorsImage').removeClass("invisible").addClass("animated bounceIn");
+            $('.mentorsName').removeClass("invisible").addClass("animated flipInX");
+            $('.mTitle').removeClass("invisible").addClass("animated flipInX");
+            $('#team .fa').removeClass("invisible").addClass("animated flipInX");
+
+
         }
 
-        if (wScroll > $('.form-container').offset().top - 50) {
-            $('.form-container').removeClass("invisible").addClass("animated slideInDown")
+        if ( ($.scrollify.isDisabled()) && (wScroll < $('#team').offset().top + 200) ){
+          $.scrollify.enable();
         }
 
-        if (wScroll > $('.form-container:nth-child(2)').offset().top - 50) {
-            $('.form-container:nth-child(2) form').removeClass("invisible").addClass("animated slideInDown")
-            $('footer').removeClass("invisible").addClass("animated slideInRight")
+        if (wScroll > $('.form-container').offset().top - 100){
+          $.scrollify.disable();
+          $('.form-container').removeClass("invisible").addClass("animated slideInDown")
+          $('footer').removeClass("invisible").addClass("animated slideInLeft")
         }
+
     });
     $('body').on('keydown', 'input, select, textarea', function(e) {
         var self = $(this),
@@ -77,6 +81,7 @@ $(document).ready(function() {
             return false;
         }
     });
+    // This will fire when document is ready:
 });
 
 function submitMessage(message) {
@@ -84,10 +89,3 @@ function submitMessage(message) {
     var $toastContent = $('<span>' + message + '</span>');
     Materialize.toast($toastContent, 2000);
 }
-/**
-$(window).resize(function() {
-    if (screen.width <= 767) {
-      $.scrollify.disable();
-    }
-});
-**/
