@@ -1,7 +1,7 @@
 <head>
     <script src="js/jquery-3.0.0.min.js"></script>
     <script src="js/jquery.scrollify.min.js"></script>
-    <script src="js/change.js"></script>
+    <script src="js/scrollspy.js"></script>
     <link rel="stylesheet" href="css/style.min.css">
 
     <script type="text/javascript">
@@ -14,10 +14,49 @@
             standardScrollElements: ".dropdown-content",
             setHeights: true,
             overflowScroll: true,
-            before: function() {},
-            after: function() {},
+            before: function(i,panel) {
+              console.log('enter:'+ i);
+              scrollspy(i);
+            },
+            after: function() {
+
+            },
             afterResize: function() {},
             afterRender: function() {}
+        });
+
+        function scrollspy(i){
+          if (i==0) {
+            console.log("#n4");
+            $("#nav-btns .a").removeClass("active");
+            $("#n4").addClass("active");
+          }else if(i==3) {
+            console.log("#n3");
+            $("#nav-btns .a").removeClass("active");
+            $("#n3").addClass("active");
+          }else if (i==5) {
+            console.log("#n2");
+            $("#nav-btns .a").removeClass("active");
+            $("#n2").addClass("active");
+          }else if (i==6) {
+            console.log("#n1");
+            $("#nav-btns .a").removeClass("active");
+            $("#n1").addClass("active");
+          }
+        }
+
+        $('.btnToForm').on('click', function() {
+            if (current !== "form") {
+                current = "form";
+                console.log("current");
+                $.scrollify.disable();
+                current = "form";
+                $('#canvas').removeClass("animated fadeInLeft").addClass("animated fadeOutLeft");
+                setTimeout(function() {
+                    $('#canvas').load("form.html").removeClass("animated fadeOutLeft").addClass("animated fadeInRight");
+                    document.body.scrollTop = $('#canvas').offset().top;
+                }, 1000);
+            }
         });
     </script>
 
@@ -46,7 +85,7 @@
             }
         }
     </style>
-</head>
+</head>7
 <!-- Landing Page
     –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 <section id="LandingPage" class="section scrollspy" data-section-name="LandingPage">
