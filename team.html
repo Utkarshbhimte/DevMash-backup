@@ -1,4 +1,17 @@
-
+<script type="text/javascript">
+    $(document).ready(function() {
+      $('.btnToForm').on('click', function() {
+          if (current !== "form") {
+              current = "form";
+              $('#canvas').addClass("animated fadeOutUp");
+              setTimeout(function() {
+                  document.body.scrollTop = $('body').offset().top;
+                  $('#canvas').load("form.html").removeClass("animated fadeOutUp").addClass("animated fadeInUp");
+              }, 1000);
+          }
+      });
+    });
+</script>
 
 <!-- Team Page
 –––––––––––––––––––––––––––––––––––––––––––––––––– -->

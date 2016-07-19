@@ -1,6 +1,8 @@
 $(document).ready(function() {
     $('#canvas').load("content.html");
 
+    smoothScrolling();
+
     var width = $(window).width(),
         height = $(window).height();
     current = "home";
@@ -9,6 +11,8 @@ $(document).ready(function() {
 
     $('.btnToForm').on('click', function() {
         if (current !== "form") {
+          $("#nav-btns a").removeClass("active");
+          $("#n1").addClass("active");
             current = "form";
             $('#canvas').addClass("animated fadeOutUp");
             setTimeout(function() {
@@ -20,6 +24,8 @@ $(document).ready(function() {
 
     $('.btnToHome').on('click', function() {
         if (current !== "home") {
+          $("#nav-btns a").removeClass("active");
+          $("#n4").addClass("active");
             current = "home";
             $('#canvas').addClass("animated fadeOutUp");
             setTimeout(function() {
@@ -31,6 +37,8 @@ $(document).ready(function() {
 
     $('.btnToTracks').on('click', function() {
         if (current !== "tracks") {
+          $("#nav-btns a").removeClass("active");
+          $("#n3").addClass("active");
             current = "tracks";
             $('#canvas').addClass("animated fadeOutUp");
 
@@ -46,6 +54,8 @@ $(document).ready(function() {
 
     $('.btnToTeam').on('click', function() {
         if (current !== "team") {
+          $("#nav-btns a").removeClass("active");
+          $("#n2").addClass("active");
             current = "team";
             $('#canvas').addClass("animated fadeOutUp");
             setTimeout(function() {

@@ -84,9 +84,13 @@ html {
     font-weight: 500;
     cursor: pointer
 }
+.active{
+  color: #000 !important;
+  background-color: #FFF;
+}
 #nav-btns a:hover {
     color: #000;
-    background-color: #FFF
+    background-color: #FFF;
 }
 #LandingPage {
     width: 100vw;

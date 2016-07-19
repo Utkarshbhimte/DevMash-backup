@@ -25,8 +25,31 @@ $('.btnToForm').on('click', function() {
         }, 1000);
     }
 });
-</script>
 
+$('.btnToTeam').on('click', function() {
+    if (current !== "team") {
+        current = "team";
+        $('#canvas').addClass("animated fadeOutUp");
+        setTimeout(function() {
+            document.body.scrollTop = $('body').offset().top;
+            $('#canvas').load("team.html");
+
+            setTimeout(function() {
+                $('#canvas').removeClass("animated fadeOutUp").addClass("animated fadeInUp");
+
+                setTimeout(function() {
+                    $('.mentorsImage').removeClass("invisible").addClass("animated bounceIn");
+                    $('.mentorsName').removeClass("invisible").addClass("animated flipInX");
+                    $('.mTitle').removeClass("invisible").addClass("animated flipInX");
+                    $('#team .fa').removeClass("invisible").addClass("animated flipInX");
+
+
+                }, 1000);
+            }, 500);
+        }, 1000);
+    }
+});
+</script>
 
 <!-- Second Page
 –––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -84,4 +107,7 @@ $('.btnToForm').on('click', function() {
             <a class="btnToForm button invisible">Apply Now</a>
         </div>
     </div>
+    <a class="arrow-wrap btnToTeam" onclick="  $.scrollify.next();">
+        <i class="fa fa-3x fa-angle-down animated fadeInDown" aria-hidden="true"></i>
+    </a>
 </section>
