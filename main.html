@@ -1,6 +1,8 @@
 <head>
   <script src="js/jquery-3.0.0.min.js"></script>
   <script src="js/jquery.scrollify.min.js"></script>
+  <script src="js/change.js"></script>
+
   <script type="text/javascript">
   $.scrollify({
       section: "section",
@@ -17,21 +19,6 @@
       afterRender: function() {}
   });
 
-  $('.btnToForm').on('click', function() {
-      if (current !== "form") {
-          current = "form";
-          console.log("current");
-          $.scrollify.disable();
-          $("#nav-btns a").removeClass("active");
-          $("#n1").addClass("active");
-          current = "form";
-          $('#canvas').removeClass("animated fadeInLeft").addClass("animated fadeOutLeft");
-          setTimeout(function() {
-              $('#canvas').load("form.html").removeClass("animated fadeOutLeft").addClass("animated fadeInRight");
-              document.body.scrollTop = $('body').offset().top;
-          }, 1000);
-      }
-  });
 
   </script>
 </head>
@@ -44,7 +31,7 @@
 
                 </div>
 
-                <a class="arrow-wrap" href="#second">
+                <a class="arrow-wrap"onclick="  $.scrollify.next();">
                     <i class="fa fa-3x fa-angle-down animated fadeInDown" aria-hidden="true"></i>
                 </a>
             </section>
@@ -55,7 +42,7 @@
             <!-- Second Page
     –––––––––––––––––––––––––––––––––––––––––––––––––– -->
             <section id="second" data-section-name="second">
-                <div class="opt-content row valign-wrapper">
+                <div id="3-tracksvg"class="opt-content row valign-wrapper invisible">
                     <img src="images\2-track.svg" alt="" />
                 </div>
                 <a class="arrow-wrap" onclick="  $.scrollify.next();">

@@ -1,8 +1,7 @@
 $(document).ready(function() {
     $('#canvas').load("main.html");
     var width = $(window).width(),
-        height = $(window).height(),
-        current = "";
+        height = $(window).height();
 
     console.log((width <= 800));
     smoothScrolling();
@@ -21,36 +20,7 @@ $(document).ready(function() {
             }
         });
     }
-    $('.btnToForm').on('click', function() {
-        if (current !== "form") {
-            current = "form";
-            console.log("current");
-            $.scrollify.disable();
-            $("#nav-btns a").removeClass("active");
-            $("#n1").addClass("active");
-            current = "form";
-            $('#canvas').removeClass("animated fadeInLeft").addClass("animated fadeOutLeft");
-            setTimeout(function() {
-                $('#canvas').load("form.html").removeClass("animated fadeOutLeft").addClass("animated fadeInRight");
-                document.body.scrollTop = $('body').offset().top;
-            }, 1000);
-        }
-    });
 
-    $('#n2,#n3,#n4').on('click', function() {
-        if (current == "form") {
-          console.log("yeah");
-            current = "";
-            $.scrollify.enable();
-            $("#nav-btns a").removeClass("active");
-            $(this).addClass("active");
-            $('#canvas').removeClass("animated fadeInLeft").addClass("animated fadeOutLeft");
-            setTimeout(function() {
-                $('#canvas').load("main.html").removeClass("animated fadeOutLeft").addClass("animated fadeInRight");
-                document.body.scrollTop = $('body').offset().top;
-            }, 1000);
-        }
-    });
     /*
         $('#n2','#n3','#n4').on('click', function() {
             if (current !== "") {
@@ -73,26 +43,34 @@ $(document).ready(function() {
         var wScroll = $(this).scrollTop();
 
         if (wScroll > $('#second').offset().top - 50) {
-            $('#second p').removeClass("invisible").addClass("animated bounceIn");
+            $('#3-tracksvg').removeClass("invisible").addClass("animated fadeinTop");
+            $("#nav-btns a").removeClass("active");
+            $('#n3').addClass("active");
         }
 
         if (wScroll > $('#three').offset().top - 50) {
             $('#three .four').removeClass("invisible").addClass("animated fadeInLeft");
             $('#three .eight').removeClass("invisible").addClass("animated fadeinTop");
-            $('#three .button').removeClass("invisible").addClass("animated bounceIn")
+            $('#three .button').removeClass("invisible").addClass("animated bounceIn");
+            $("#nav-btns a").removeClass("active");
+            $('#n3').addClass("active");
 
         }
 
         if (wScroll > $('#four').offset().top - 50) {
             $('#four .four').removeClass("invisible").addClass("animated fadeInLeft");
             $('#four .eight').removeClass("invisible").addClass("animated fadeinTop");
-            $('#four .button').removeClass("invisible").addClass("animated bounceIn")
+            $('#four .button').removeClass("invisible").addClass("animated bounceIn");
+            $("#nav-btns a").removeClass("active");
+            $('#n3').addClass("active");
         }
 
         if (wScroll > $('#five').offset().top - 50) {
             $('#five .four').removeClass("invisible").addClass("animated fadeInLeft");
             $('#five .eight').removeClass("invisible").addClass("animated fadeinTop");
-            $('#five .button').removeClass("invisible").addClass("animated bounceIn")
+            $('#five .button').removeClass("invisible").addClass("animated bounceIn");
+            $("#nav-btns a").removeClass("active");
+            $('#n3').addClass("active");
         }
 
         if (wScroll > $('#team').offset().top - 50) {
@@ -100,14 +78,16 @@ $(document).ready(function() {
             $('.mentorsName').removeClass("invisible").addClass("animated flipInX");
             $('.mTitle').removeClass("invisible").addClass("animated flipInX");
             $('#team .fa').removeClass("invisible").addClass("animated flipInX");
+            $("#nav-btns a").removeClass("active");
+            $('#n3').addClass("active");
 
 
         }
 
-        if (wScroll > $('.form-container').offset().top - 100) {
+        if (wScroll > $('#partners').offset().top - 100) {
             $('.form-container').removeClass("invisible").addClass("animated slideInDown");
             $('footer').removeClass("invisible").addClass("animated slideInLeft");
-
+            $("#nav-btns a").removeClass("active");
         }
 
     });
