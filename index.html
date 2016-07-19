@@ -21,7 +21,6 @@
     <link rel="stylesheet" href="css/skeleton.css">
     <link rel="stylesheet" href="css/font-awesome.min.css">
     <link rel="stylesheet" href="css/animate.css">
-    <link rel="stylesheet" href="css/materialize.min.css">
 
     <!-- Favicon
          –––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -29,7 +28,6 @@
     <!-- Scripts
          –––––––––––––––––––––––––––––––––––––––––––––––––– -->
     <script src="js/jquery-3.0.0.min.js"></script>
-    <script src="js/materialize.min.js"></script>
     <script src="js/jquery.scrollify.min.js"></script>
     <script src="js/script.js"></script>
 
@@ -44,248 +42,21 @@
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
     <div class="nav animated fadeInDown">
         <div id="nav-btns">
-            <a id="btnToForm" onclick=" $.scrollify.move(6);">Register</a>
+            <a class="btnToForm">Register</a>
             <a id="btnToTeam" onclick=" $.scrollify.move(5);">Mentors</a>
-            <a id="btnToTracks" onclick=" $.scrollify.move(2);">Tracks</a>
+            <a id="btnToTracks" onclick=" ">Tracks</a>
             <a id="btnToHome" onclick=" $.scrollify.move(0);">Home</a>
         </div>
     </div>
-    <!-- Landing Page
-    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-    <section id="LandingPage" class="section scrollspy" data-section-name="LandingPage">
 
-        <div class="landingImageWrapper">
-            <img src="images\logo.svg" class="animated flipInY" />
-
-        </div>
-
-        <a class="arrow-wrap" onclick="  $.scrollify.next();">
-            <i class="fa fa-3x fa-angle-down animated fadeInDown" aria-hidden="true"></i>
-        </a>
-    </section>
+    <div id="canvas">
 
 
-
-
-    <!-- Second Page
-    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-    <section id="second" data-section-name="second">
-        <div class="opt-content row valign-wrapper">
-            <img src="images\2-track.svg" alt="" />
-        </div>
-        <a class="arrow-wrap" onclick="  $.scrollify.next();">
-            <i class="fa fa-3x fa-angle-down animated fadeInDown" aria-hidden="true"></i>
-        </a>
-    </section>
-
-    <!-- Third Page
-    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-    <section id="three" class="course-track valign-wrapper section scrollspy">
-        <div class="opt-content row valign">
-            <div class="four columns invisible"><img class="course-logo" src="images/android-white.svg" style="max-width: 260px;"></div>
-            <div class="eight columns invisible">
-                <p>Android is the world's most popular mobile OS. With over 1 Billion daily active users, writing apps for Android is an in-demand skill. In this course you will learn all about the concepts which are unique to the Andoid platform.
-                </p>
-                <a onclick=" $.scrollify.move(6);" class="button invisible">Apply Now</a>
-            </div>
-        </div>
-        <a class="arrow-wrap" onclick="  $.scrollify.next();">
-            <i class="fa fa-3x fa-angle-down animated fadeInDown" aria-hidden="true"></i>
-        </a>
-    </section>
-
-    <!-- Fourth Page
-    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-    <section id="four" class="course-track valign-wrapper">
-        <div class="opt-content row valign">
-            <div class="four columns invisible"><img class="course-logo" src="images/python-white.svg" style="max-width: 260px;"></div>
-            <div class="eight columns invisible">
-                <p>Python is one of the most popular languages among beginners. Due it's fast adoption and clean syntax, Python finds use in a lot of places, from tech giants like Google and Facebook, all the way to Disney and NASA. Join us to learn the
-                    language and develop web apps using the Django framework
-                </p>
-                <a onclick=" $.scrollify.move(6);" class="button invisible">Apply Now</a>
-            </div>
-        </div>
-        <a class="arrow-wrap" onclick="  $.scrollify.next();">
-            <i class="fa fa-3x fa-angle-down animated fadeInDown" aria-hidden="true"></i>
-        </a>
-    </section>
-
-    <!-- Fifth Page
-    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-    <section id="five" class="course-track valign-wrapper">
-        <div class="opt-content row valign">
-            <div class="four columns invisible"><img class="course-logo" src="images/web-white.svg" style="max-width: 260px;"></div>
-            <div class="eight columns invisible">
-                <p>The web has been around for decades and is one of the most dominant platforms for writing software. Web requires a marriage of a lot of disciplines like Design, Engineering, Security etc. Join us as we walk you through the process of writing
-                    performant web apps that work across devices and look great.
-                </p>
-                <a onclick=" $.scrollify.move(6);" class="button invisible">Apply Now</a>
-            </div>
-        </div>
-        <a class="arrow-wrap" onclick="  $.scrollify.next();">
-            <i class="fa fa-3x fa-angle-down animated fadeInDown" aria-hidden="true"></i>
-        </a>
-    </section>
-
-    <!-- Team Page
-    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-    <section id="team" class="valign-wrapper section scrollspy" data-section-name="team">
-        <div class="outer-container">
-            <div class="row outer">
-                <div class="three columns mContent">
-                    <div class="">
-                        <img class="invisible mentorsImage" src="images\prateek.png" />
-                    </div>
-                    <div class="">
-                        <h5 class="invisible mentorsName">Prateek Prasad</h5>
-                        <div class="titleContainer">
-                            <h6 class="invisible mTitle">Android Developer</h6>
-                            <h6 class="invisible mTitle">Interaction Designer</h6>
-                        </div>
-                    </div>
-
-                    <div class="inner">
-                        <a href="https://twitter.com/hackertronix" target="_blank"><i class="fa invisible fa-twitter"></i></a>
-                        <a href="https://github.com/hackertronix" target="_blank"><i class="fa invisible fa-github"></i></a>
-                    </div>
-                </div>
-                <div class="three columns mContent">
-                    <div class="">
-                        <img class="invisible mentorsImage" src="images\sid.png" />
-                    </div>
-                    <div class="">
-                        <h5 class="invisible mentorsName">Sidharth Kumar</h5>
-                        <div class="titleContainer">
-                            <h6 class="invisible mTitle">Python Developer</h6>
-                            <h6 class="invisible mTitle">BackEnd WebDeveloper</h6>
-                        </div>
-                    </div>
-
-                    <div class="inner">
-                        <a href="https://twitter.com/sidharth6323" target="_blank"><i class="fa invisible fa-twitter"></i></a>
-                        <a href="https://github.com/sidharth6323" target="_blank"><i class="fa invisible fa-github"></i></a>
-                    </div>
-                </div>
-                <div class="three columns mContent">
-                    <div class="">
-                        <img class="invisible mentorsImage" src="images\rimil.png" />
-                    </div>
-                    <div class="">
-                        <h5 class="invisible mentorsName">Rimil Dey</h5>
-                        <div class="titleContainer">
-                            <h6 class="invisible mTitle">FrontEnd Web Developer</h6>
-                        </div>
-                    </div>
-                    <div class="inner">
-                        <a href="https://twitter.com/rimildeyjsr" target="_blank"><i class="fa invisible fa-twitter"></i></a>
-                        <a href="https://github.com/rimildeyjsr" target="_blank"><i class="fa invisible fa-github"></i></a>
-                    </div>
-                </div>
-                <div class="three columns mContent">
-                    <div class="">
-                        <img class="invisible mentorsImage" g src="images\utkarsh.png" />
-                    </div>
-                    <div class="">
-                        <h5 class="invisible mentorsName">Utkarsh Bhimte</h5>
-                        <div class="titleContainer">
-                            <h6 class="invisible mTitle">FrontEnd Web Developer</h6>
-                        </div>
-                    </div>
-                    <div class="inner">
-                        <a href="https://twitter.com/Karshe95" target="_blank"><i class="fa invisible fa-twitter"></i></a>
-                        <a href="https://github.com/Utkarshbhimte/" target="_blank"><i class="fa invisible fa-github"></i></a>
-                    </div>
-
-                </div>
-
-            </div>
-
-        </div>
-        <a class="arrow-wrap" onclick="  $.scrollify.next();">
-            <i class="fa fa-3x fa-angle-down animated fadeInDown" aria-hidden="true"></i>
-        </a>
-    </section>
+    </div>
 
 
     <!-- Form
        –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-    <section id="form"class="invisible  section scrollspy form-container" data-section-name="form">
-        <form class="container">
-
-            <h2>Registration Form</h2>
-            <div class="row" data-plus-as-tab="true">
-                <div class="input-field columns six">
-                    <input placeholder="First Name" id="first_name" type="text" class="validate enterastab">
-                </div>
-                <div class="input-field columns six">
-                    <input placeholder="Last Name" id="last_name" type="text" class="validate  enterastab">
-                </div>
-            </div>
-            <div class="row ">
-                <div id="gender" class="columns six row " class=" enterastab">
-                    <p class="columns six">
-                        <input name="group1" type="radio" id="test1" />
-                        <label for="test1">Male</label>
-                    </p>
-                    <p class="columns six ">
-                        <input name="group1" type="radio" id="test2" />
-                        <label for="test2">Female</label>
-                    </p>
-                </div>
-                <div class="input-field columns six">
-                    <input placeholder="Contact No." id="icon_telephone" type="tel" class="validate enterastab">
-                </div>
-            </div>
-            <div class="row">
-                <div class="input-field columns six">
-                    <select>
-                        <option value="" disabled selected>Branch</option>
-                        <option value="CS">CS</option>
-                        <option value="IS">IS</option>
-                        <option value="ECE">ECE</option>
-                        <option value="IT">IT</option>
-                        <option value="EEE">EEE</option>
-                        <option value="MECH">MECH</option>
-                        <option value="CIVIL">CIVIL</option>
-                    </select>
-                </div>
-                <div class="input-field columns six">
-                    <input placeholder="USN" id="usn" type="text" class="validate">
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="input-field columns six">
-                    <select>
-                        <option value="" disabled selected>Course Track</option>
-                        <option value="Android">Android Development</option>
-                        <option value="FrontEnd">FrontEnd Web Development</option>
-                        <option value="Python">Python</option>
-                    </select>
-                </div>
-                <div class="input-field columns six">
-                    <input placeholder="Github Link" id="github" type="text" class="validate">
-                </div>
-            </div>
-            <div class="row">
-                <div class="input-field columns six">
-                    <select>
-                        <option value="" disabled selected>Year</option>
-                        <option value="I">I</option>
-                        <option value="II">II</option>
-                        <option value="III">III</option>
-                        <option value="IV">IV</option>
-                    </select>
-                </div>
-                <div class="input-field columns six">
-                    <input placeholder="Email" id="email" type="email" class="validate">
-                </div>
-            </div>
-            <button class="button" onclick="submitMessage('Registration Done!!')">Register</button>
-        </form>
-
-    </section>
 
 
 
