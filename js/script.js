@@ -10,53 +10,60 @@ $(document).ready(function() {
     $('.btnToForm').on('click', function() {
         if (current !== "form") {
             current = "form";
-            $('#canvas').addClass("animated fadeOutLeft");
+            $('#canvas').addClass("animated fadeOutUp");
             setTimeout(function() {
-              document.body.scrollTop = $('body').offset().top;
-                $('#canvas').load("form.html").removeClass("animated fadeOutLeft").addClass("animated fadeInRight");
+                document.body.scrollTop = $('body').offset().top;
+                $('#canvas').load("form.html").removeClass("animated fadeOutUp").addClass("animated fadeInUp");
             }, 1000);
         }
     });
 
-    $('#btnToHome').on('click', function() {
+    $('.btnToHome').on('click', function() {
         if (current !== "home") {
             current = "home";
-            $('#canvas').addClass("animated fadeOutLeft");
+            $('#canvas').addClass("animated fadeOutUp");
             setTimeout(function() {
-              document.body.scrollTop = $('body').offset().top;
-                $('#canvas').load("content.html").removeClass("animated fadeOutLeft").addClass("animated fadeInRight");
+                document.body.scrollTop = $('body').offset().top;
+                $('#canvas').load("content.html").removeClass("animated fadeOutUp").addClass("animated fadeInUp");
             }, 1000);
         }
     });
 
-    $('#btnToTracks').on('click', function() {
+    $('.btnToTracks').on('click', function() {
         if (current !== "tracks") {
             current = "tracks";
-            $('#canvas').addClass("animated fadeOutLeft");
+            $('#canvas').addClass("animated fadeOutUp");
 
             setTimeout(function() {
-              document.body.scrollTop = $('body').offset().top;
-                $('#canvas').load("tracks.html").removeClass("animated fadeOutLeft").addClass("animated fadeInRight");
+                document.body.scrollTop = $('body').offset().top;
+                $('#canvas').load("tracks.html");
+                setTimeout(function() {
+                    $('#canvas').removeClass("animated fadeOutUp").addClass("animated fadeInUp");
+                }, 1000);
             }, 1000);
         }
     });
 
-    $('#btnToTeam').on('click', function() {
+    $('.btnToTeam').on('click', function() {
         if (current !== "team") {
             current = "team";
-            $('#canvas').addClass("animated fadeOutLeft");
+            $('#canvas').addClass("animated fadeOutUp");
             setTimeout(function() {
-              document.body.scrollTop = $('body').offset().top;
-                $('#canvas').load("team.html").removeClass("animated fadeOutLeft").addClass("animated fadeInRight");
+                document.body.scrollTop = $('body').offset().top;
+                $('#canvas').load("team.html");
 
                 setTimeout(function() {
-                    $('.mentorsImage').removeClass("invisible").addClass("animated bounceIn");
-                    $('.mentorsName').removeClass("invisible").addClass("animated flipInX");
-                    $('.mTitle').removeClass("invisible").addClass("animated flipInX");
-                    $('#team .fa').removeClass("invisible").addClass("animated flipInX");
+                    $('#canvas').removeClass("animated fadeOutUp").addClass("animated fadeInUp");
+
+                    setTimeout(function() {
+                        $('.mentorsImage').removeClass("invisible").addClass("animated bounceIn");
+                        $('.mentorsName').removeClass("invisible").addClass("animated flipInX");
+                        $('.mTitle').removeClass("invisible").addClass("animated flipInX");
+                        $('#team .fa').removeClass("invisible").addClass("animated flipInX");
 
 
-                }, 300);
+                    }, 1000);
+                }, 500);
             }, 1000);
         }
     });
@@ -103,20 +110,20 @@ $(document).ready(function() {
             $('#second p').removeClass("invisible").addClass("animated bounceIn");
         }
 
-        if (wScroll > $('#three').offset().top - height/3) {
+        if (wScroll > $('#three').offset().top - height / 3) {
             $('#three .four').removeClass("invisible").addClass("animated fadeInLeft");
             $('#three .eight').removeClass("invisible").addClass("animated fadeinTop");
             $('#three .button').removeClass("invisible").addClass("animated bounceIn")
 
         }
 
-        if (wScroll > $('#four').offset().top - height/3) {
+        if (wScroll > $('#four').offset().top - height / 3) {
             $('#four .four').removeClass("invisible").addClass("animated fadeInLeft");
             $('#four .eight').removeClass("invisible").addClass("animated fadeinTop");
             $('#four .button').removeClass("invisible").addClass("animated bounceIn")
         }
 
-        if (wScroll > $('#five').offset().top - height/3) {
+        if (wScroll > $('#five').offset().top - height / 3) {
             $('#five .four').removeClass("invisible").addClass("animated fadeInLeft");
             $('#five .eight').removeClass("invisible").addClass("animated fadeinTop");
             $('#five .button').removeClass("invisible").addClass("animated bounceIn")
@@ -143,10 +150,10 @@ $(document).ready(function() {
                         if ((width <= 800)) {
                             console.log("mobile");
                             $.scrollify.disable();
-                            $("#btnToForm").attr("href", "#form");
-                            $("#btnToTeam").attr("href", "#team");
-                            $("#btnToTracks").attr("href", "#three");
-                            $("#btnToHome").attr("href", "#LandingPage");
+                            $(".btnToForm").attr("href", "#form");
+                            $(".btnToTeam").attr("href", "#team");
+                            $(".btnToTracks").attr("href", "#three");
+                            $(".btnToHome").attr("href", "#LandingPage");
 
                             smoothScrolling();
                         }
