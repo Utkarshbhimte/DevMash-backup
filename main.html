@@ -17,6 +17,22 @@
       afterRender: function() {}
   });
 
+  $('.btnToForm').on('click', function() {
+      if (current !== "form") {
+          current = "form";
+          console.log("current");
+          $.scrollify.disable();
+          $("#nav-btns a").removeClass("active");
+          $("#n1").addClass("active");
+          current = "form";
+          $('#canvas').removeClass("animated fadeInLeft").addClass("animated fadeOutLeft");
+          setTimeout(function() {
+              $('#canvas').load("form.html").removeClass("animated fadeOutLeft").addClass("animated fadeInRight");
+              document.body.scrollTop = $('body').offset().top;
+          }, 1000);
+      }
+  });
+
   </script>
 </head>
             <!-- Landing Page
