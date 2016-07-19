@@ -1,4 +1,9 @@
 $(document).ready(function() {
+
+  $('select').on('focus', function() {
+    document.body.scrollTop = $(this).offset().top;
+});
+
             var width = $(window).width(),
                 height = $(window).height();
             console.log((width <= 800));
@@ -75,15 +80,15 @@ $(document).ready(function() {
                     if (wScroll > $('.form-container').offset().top - 100) {
                         $('.form-container').removeClass("invisible").addClass("animated slideInDown");
                         $('footer').removeClass("invisible").addClass("animated slideInLeft");
-                        if (!(($.scrollify.isDisabled()))) {
+                  /*      if (!(($.scrollify.isDisabled()))) {
                           console.log((width <= 800));
                           console.log("check initiated");
                                 check();
-                            }
+                            }*/
                         }
 
                     });
-
+/*
                 function check() {
                     if ((width <= 800)) {
                         console.log("mobile");
@@ -95,7 +100,7 @@ $(document).ready(function() {
 
                         smoothScrolling();
                     }
-                }
+                } */
                 $('body').on('keydown', 'input, select, textarea', function(e) {
                     var self = $(this),
                         form = self.parents('form:eq(0)'),

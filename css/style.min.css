@@ -108,6 +108,8 @@ html {
 }
 section {
     position: relative;
+    display: block;
+    height: 100vh;
 }
 .opt-content {
     position: absolute;
@@ -363,11 +365,8 @@ footer {
     .inner .fa-twitter:nth-child(1) {
         margin-bottom: 12px
     }
-    .mobile-only {
-        display: inline
-    }
     .form-container {
-        margin-bottom: 2vh
+        padding-bottom: 2vh
     }
     .form-container h2{
       font-size: 10vw;
@@ -375,15 +374,9 @@ footer {
     form div.row, form input {
         margin-bottom: 0!important
     }
-    footer {
-        margin-left: 0;
-        position: relative;
-        bottom: -5vh;
-        left: 0
-    }
     #second img {
         height: auto;
-        width: 90vw
+        width: 80vw;
     }
     form input {
         height: 7vh!important
