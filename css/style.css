@@ -84,11 +84,8 @@ html {
     font-weight: 500;
     cursor: pointer
 }
-.active{
-  color: #000 !important;
-  background-color: #FFF;
-}
-#nav-btns a:hover {
+
+#nav-btns a:active {
     color: #000;
     background-color: #FFF;
 }
@@ -235,10 +232,7 @@ footer, footer h6 {
     margin-right: auto;
 }
 #team .arrow-wrap {
-    font-size: 1.5em;
-    width: 100%!important;
-    position: absolute;
-    bottom: 6vh;
+    font-size: 2em;
     left: 0vw;
 }
 form.container {
@@ -388,7 +382,7 @@ footer {
     -webkit-transition: all 0.15s ease-out 0;
     -moz-transition: all 0.15s ease-out 0;
     transition: all 0.15s ease-out 0;
-    background: #cbd1d8;
+    background: #000;
     border: none;
     color: #fff;
     cursor: pointer;
@@ -536,5 +530,9 @@ select option{
     }
     select {
         margin-top: .5em;
+    }
+    #team .arrow-wrap {
+        font-size: 3em;
+        left: 0vw;
     }
 }

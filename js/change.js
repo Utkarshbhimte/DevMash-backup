@@ -14,12 +14,11 @@ $('.btnToForm').on('click', function() {
     }
 });
 
-$('#n2,#n3,#n4').on('click', function() {
+$('.a').on('click', function() {
     if (current == "form") {
       console.log("yeah");
         current = "";
         $.scrollify.enable();
-
         $('#canvas').removeClass("animated fadeInLeft").addClass("animated fadeOutLeft");
         setTimeout(function() {
             $('#canvas').load("main.html").removeClass("animated fadeOutLeft").addClass("animated fadeInRight");

@@ -1,5 +1,5 @@
 $(document).ready(function() {
-    $('#canvas').load("content.html");
+    $('#canvas').load("main.html");
 
     smoothScrolling();
 
@@ -93,14 +93,14 @@ $(document).ready(function() {
             }
         });
     }
-    
+
 
 
     $(window).scroll(function() {
         var wScroll = $(this).scrollTop();
 
         if (wScroll > $('#second').offset().top - 50) {
-            $('#second p').removeClass("invisible").addClass("animated bounceIn");
+            $('#3-tracksvg img').removeClass("invisible").addClass("animated bounceIn");
         }
 
         if (wScroll > $('#three').offset().top - height / 3) {
@@ -122,9 +122,11 @@ $(document).ready(function() {
             $('#five .button').removeClass("invisible").addClass("animated bounceIn")
         }
 
-        if (wScroll > $('#team').offset().top) {
-
-
+        if (wScroll > $('#team').offset().top - height / 3) {
+          $('.mentorsImage').removeClass("invisible").addClass("animated fadeInLeft");
+          $('.mentorsName').removeClass("invisible").addClass("animated fadeinTop");
+          $('.mTitle').removeClass("invisible").addClass("animated bounceIn")
+          $('.fa').removeClass("invisible").addClass("animated bounceIn")
         }
 
         if (wScroll > $('#partners').offset().top - 100) {
