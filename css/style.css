@@ -21,14 +21,14 @@ body, html {
 }
 html {
     overflow: scroll;
-    overflow-x: hidden
+    overflow-x: hidden;
 }
 ::-webkit-scrollbar {
     width: 0;
     background: 0 0
 }
 ::-webkit-scrollbar-thumb {
-    background: #FFF
+    background: #FFF;
 }
 .invisible {
     opacity: 0
@@ -119,9 +119,11 @@ section {
     left: 50%;
     transform: translate(-50%, -50%)
 }
-footer, footer h6 {
-    right: 0;
+footer, footer p {
     bottom: 0
+}
+footer p{
+  margin-bottom: 0px;
 }
 #LandingPage p {
     color: #FFF;
@@ -235,8 +237,12 @@ footer, footer h6 {
     font-size: 2em;
     left: 0vw;
 }
+.m{
+  margin-bottom: 0px!important;
+}
 form.container {
     padding-bottom: 10vh;
+    padding-top: 5vh;
 }
 .course-track .button, form .button {
     margin-top: 2.5vh;
@@ -266,17 +272,16 @@ div#gender {
 .form-container h2 {
     border: 1px solid #FFF;
     padding: .2em;
-    margin: 10vh 0!important
+    margin: 10vh 0!important;
 }
 footer {
     font-family: 'Roboto Mono', monospace!important;
     background: #FFF!important;
     padding-right: 1em;
     width: 100vw!important;
-    margin-left: -15vw;
     padding-left: 1em;
     animation-delay: .5s;
-    z-index: 0
+    z-index: 0;
 }
 .valign-wrapper {
     display: -webkit-flex;

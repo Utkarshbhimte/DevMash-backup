@@ -9,74 +9,6 @@ $(document).ready(function() {
 
     console.log("mobile - " + (width <= 800));
 
-    $('.btnToForm').on('click', function() {
-        if (current !== "form") {
-            current = "form";
-            console.log("current");
-            $.scrollify.disable();
-            current = "form";
-            $('#canvas').removeClass("animated fadeInLeft").addClass("animated fadeOutLeft");
-            setTimeout(function() {
-                $('#canvas').load("form.html").removeClass("animated fadeOutLeft").addClass("animated fadeInRight");
-                document.body.scrollTop = $('#canvas').offset().top;
-            }, 1000);
-        }
-    });
-
-    $('.btnToHome').on('click', function() {
-        if (current !== "home") {
-
-            current = "home";
-            $('#canvas').addClass("animated fadeOutUp");
-            setTimeout(function() {
-                document.body.scrollTop = $('body').offset().top;
-                $('#canvas').load("content.html").removeClass("animated fadeOutUp").addClass("animated fadeInUp");
-            }, 1000);
-        }
-    });
-
-    $('.btnToTracks').on('click', function() {
-        if (current !== "tracks") {
-
-            current = "tracks";
-            $('#canvas').addClass("animated fadeOutUp");
-
-            setTimeout(function() {
-                document.body.scrollTop = $('body').offset().top;
-                $('#canvas').load("tracks.html");
-                setTimeout(function() {
-                    $('#canvas').removeClass("animated fadeOutUp").addClass("animated fadeInUp");
-                }, 1000);
-            }, 1000);
-        }
-    });
-
-    $('.btnToTeam').on('click', function() {
-        if (current !== "team") {
-
-            current = "team";
-            $('#canvas').addClass("animated fadeOutUp");
-            setTimeout(function() {
-                document.body.scrollTop = $('body').offset().top;
-                $('#canvas').load("team.html");
-
-                setTimeout(function() {
-                    $('#canvas').removeClass("animated fadeOutUp").addClass("animated fadeInUp");
-
-                    setTimeout(function() {
-                        $('.mentorsImage').removeClass("invisible").addClass("animated bounceIn");
-                        $('.mentorsName').removeClass("invisible").addClass("animated flipInX");
-                        $('.mTitle').removeClass("invisible").addClass("animated flipInX");
-                        $('#team .fa').removeClass("invisible").addClass("animated flipInX");
-                        $('.part-logo').removeClass("invisible").addClass("animated flipInX");
-
-                    }, 1000);
-                }, 200);
-            }, 1000);
-        }
-    });
-
-
 
 
     function smoothScrolling() {
@@ -130,8 +62,9 @@ $(document).ready(function() {
         }
 
         if (wScroll > $('#partners').offset().top - 100) {
-            $('.form-container').removeClass("invisible").addClass("animated slideInDown");
-            $('footer').removeClass("invisible").addClass("animated slideInLeft");
+            $('#partners h1').removeClass("invisible").addClass("animated slideInDown");
+            $('#partners hr').removeClass("invisible").addClass("animated bounceIn");
+            $('#partners img').removeClass("invisible").addClass("animated slideInUp");
         }
 
     });

@@ -30,6 +30,7 @@
                 current = "form";
                 console.log("current");
                 $.scrollify.disable();
+                console.log($.scrollify.isDisabled());
                 current = "form";
                 $('#canvas').removeClass("animated fadeInLeft").addClass("animated fadeOutLeft");
                 setTimeout(function() {
@@ -68,7 +69,7 @@
 </head>7
 <!-- Landing Page
     –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-<section id="LandingPage" class="section scrollspy" data-section-name="LandingPage">
+<section id="LandingPage" class="section scrollspy">
 
     <div class="landingImageWrapper">
         <img src="images\logo.svg" class="animated flipInY" />
@@ -85,7 +86,7 @@
 
 <!-- Second Page
     –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-<section id="second" data-section-name="second">
+<section id="second">
     <div id="3-tracksvg" class="opt-content row valign-wrapper ">
         <img class="invisible"src="images\2-track.svg" alt="" />
     </div>
@@ -146,7 +147,7 @@
 
 <!-- Team Page
     –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-<section id="team" class="valign-wrapper section scrollspy" data-section-name="team">
+<section id="team" class="valign-wrapper section scrollspy">
     <div class="outer-container">
         <div class="row outer">
             <div class="three columns mContent">
@@ -156,7 +157,7 @@
                 <div class="">
                     <h5 class="invisible mentorsName">Prateek Prasad</h5>
                     <div class="titleContainer">
-                        <h6 class="invisible mTitle">Android Developer</h6>
+                        <h6 class="invisible m mTitle">Android Developer</h6>
                         <h6 class="invisible mTitle">Interaction Designer</h6>
                     </div>
                 </div>
@@ -173,7 +174,7 @@
                 <div class="">
                     <h5 class="invisible mentorsName">Sidharth Kumar</h5>
                     <div class="titleContainer">
-                        <h6 class="invisible mTitle">Python Developer</h6>
+                        <h6 class="invisible m mTitle">Python Developer</h6>
                         <h6 class="invisible mTitle">BackEnd WebDeveloper</h6>
                     </div>
                 </div>
@@ -228,17 +229,22 @@
        –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 <section id="partners" class="section scrollspy">
     <div class="container">
-        <h1>Our Partners</h1>
-        <hr>
+        <h1 class="invisible">Our Partners</h1>
+        <hr class="invisible">
         <div class="partner-logos row">
             <div class="six columns">
-                <img src="images\cs-society.svg" alt="cs-society" />
+                <img class="invisible" src="images\cs-society.svg" alt="cs-society" />
             </div>
             <div class="six columns">
-                <img src="images\mozilla.svg" alt="mozilla" />
+                <img class="invisible" src="images\mozilla.svg" alt="mozilla" />
             </div>
         </div>
     </div>
+    <footer>
+      <p>
+        Developed By <strong>Utkarsh Bhimte</strong>. Designed by <strong>Prateek Prasad</strong>.
+      </p>
+    </footer>
 </section>
 
 </div>
